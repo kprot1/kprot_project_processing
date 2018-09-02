@@ -17,7 +17,7 @@ class ProcessingController extends Controller
     /**
      *
      *
-     * @Route("/purchaseCalculation", name="purchase_calculation")
+     * @Route("/purchaseCalculation", name="purchase_calculation", methods={"POST"})
      */
     public function purchaseCalculationAction()
     {
