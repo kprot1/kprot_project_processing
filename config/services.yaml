@@ -31,3 +31,5 @@ services:
     # please note that last definitions always *replace* previous ones
     App\Repository\:
         resource: '../src/Repository'
+    App\Entity\:
+        resource: '../src/Entity'
