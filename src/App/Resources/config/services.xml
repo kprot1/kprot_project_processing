@@ -12,17 +12,6 @@
         </prototype>
         <prototype namespace="App\Services\" resource="../../Services"/>
 
-        <service
-                id="app.controller.my_controller"
-                class="App\Controller\MyController">
-            <argument type="service" id="serializer"/>
-            <argument type="service" id="app.services.balance_calculation_service"/>
-            <tag name="controller.service_arguments"/>
-        </service>
 
-        <service
-                id="app.services.balance_calculation_service"
-                class="App\Services\BalanceCalculationService">
-        </service>
     </services>
 </container>
