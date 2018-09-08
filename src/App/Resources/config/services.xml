@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <defaults autowire="true" autoconfigure="true" public="false"/>
+
+        <prototype namespace="App\Controller\" resource="../../Controller">
+            <tag name="controller.service_arguments" />
+        </prototype>
+        <prototype namespace="App\Services\" resource="../../Services"/>
+
+        <service
+                id="app.controller.my_controller"
+                class="App\Controller\MyController">
+            <argument type="service" id="serializer"/>
+            <argument type="service" id="app.services.balance_calculation_service"/>
+            <tag name="controller.service_arguments"/>
+        </service>
+
+        <service
+                id="app.services.balance_calculation_service"
+                class="App\Services\BalanceCalculationService">
+        </service>
+    </services>
+</container>
