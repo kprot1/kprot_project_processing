@@ -22,17 +22,16 @@
             <argument type="service" id="app.services.balance_calculation.balance_calculation_service"/>
         </service>
 
-        <!--Сервисы-->
+        <!-- Сервисы -->
         <service
                 id="app.services.balance_calculation.balance_calculation_service"
                 class="App\Services\BalanceCalculation\BalanceCalculationService">
             <argument type="service" id="app.repository.card.card_repository"/>
         </service>
 
-        <!--Репозитории-->
-        <service id="app.repository.card.card_repository" class="App\Repository\Card\CardRepository">
-            <argument type="service" id="doctrine.orm.entity_manager"/>
-        </service>
+        <!-- Репозитории -->
+        <service id="app.repository.card.card_repository" class="App\Repository\Card\CardRepository"/>
 
+        <!-- Команды -->
     </services>
 </container>
