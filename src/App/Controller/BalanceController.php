@@ -60,4 +60,14 @@ class BalanceController extends Controller
             ]
         );
     }
+
+    /**
+     * @Route("/test", name="test")
+     *
+     * @return Response
+     */
+    public function testAction(): Response
+    {
+        return $this->render('App/Test/test.html.twig', []);
+    }
 }
